@@ -152,9 +152,7 @@
                             <h5 class="card-title">Bio : {{ $u['bio'] }}</h5>
                             <h5 class="card-title">Alamat : {{ $u['alamat'] }}</h5>
                             <h5 class="card-title">Role : {{ $u['role'] }}</h5>
-
-
-
+                            <h5 class="card-title">Active : {{ $u['active'] }}</h5>
                         </div>
                     </div>
                 @endif
