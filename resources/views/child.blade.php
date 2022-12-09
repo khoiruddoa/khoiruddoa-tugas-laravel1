@@ -116,14 +116,20 @@
                 <label for="role">Role</label>
                 <select name="role" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
                     <option selected value="{{ $role }}">{{ $role }}</option>
-                    <option value="admin">admin</option>
-                    <option value="user">user</option>
+                    @if ($role == 'admin')
+                        <option value="user">user</option>
+                    @else
+                        <option value="admin">admin</option>
+                    @endif
                 </select>
                 <label for="active">Aktif</label>
                 <select name="active" class="form-select form-select-sm" aria-label=".form-select-sm example">
                     <option selected value="{{ $active }}">{{ $active }}</option>
-                    <option value='true'>true</option>
-                    <option value='false'>false</option>
+                    @if ($active == 'true')
+                        <option value='false'>false</option>
+                    @else
+                        <option value='true'>true</option>
+                    @endif
                 </select>
                 <br>
                 <button type="submit" class="btn btn-primary">find</button>
